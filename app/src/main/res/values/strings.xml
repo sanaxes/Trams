@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Где трамвай</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_select_word">Где трамвай</string>
+    <string name="com.example.alexander.preference_file_key" />
+    <string name="ettuLink"><a href="http://ettu.ru/"><u>http://ettu.ru/</u></a></string>
+    <string name="flaticonLink"><a href="http://flaticon.com"><u>http://flaticon.com/</u></a></string>
+    <string name="vkLink"><a href="http://vk.com/sanaxes/"><u>http://vk.com/sanaxes/0</u></a></string>
+</resources>

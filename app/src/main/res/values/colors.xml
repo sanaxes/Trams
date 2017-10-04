@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5189bb</color>
+    <color name="colorPrimaryDark">#e9467aa9</color>
+    <color name="colorBackground">#EDFAF9</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="holo_light_primary_dark">#0a000000</color>
+    <color name="buttons_light">#F3FDFC</color>
+</resources>
