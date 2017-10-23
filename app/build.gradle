@@ -1,12 +1,13 @@
 apply plugin: 'com.android.application'
-apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 25
-    buildToolsVersion "26.0.1"
+    buildToolsVersion '26.0.2'
     defaultConfig {
         vectorDrawables.useSupportLibrary = true
         applicationId "com.example.alexander.trams"
-        minSdkVersion 15
+        minSdkVersion 19
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -19,8 +20,7 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+
     }
 }
 
@@ -37,4 +37,9 @@ dependencies {
     compile 'com.android.support:design:25.3.1'
     compile 'com.google.code.gson:gson:2.6.2'
     testCompile 'junit:junit:4.12'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    compile "org.jetbrains.anko:anko:0.10.1"
+}
+repositories {
+    mavenCentral()
 }

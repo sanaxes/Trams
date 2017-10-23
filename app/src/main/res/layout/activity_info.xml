@@ -88,15 +88,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="Автор – Иванов Александр:"
+                    android:text="Обратная связь:"
                     android:textSize="24dp" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="@string/vkLink"
+                    android:text="@string/feedback"
                     android:textColorLink="#0563c1"
-                    android:autoLink="web"
+                    android:autoLink="email"
                     android:textSize="24dp" />
             </LinearLayout>
         </ScrollView>
