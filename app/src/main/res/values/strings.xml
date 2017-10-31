@@ -7,6 +7,7 @@
     <string name="title_activity_select_word">Где трамвай</string>
     <string name="com.example.alexander.preference_file_key" />
     <string name="ettuLink"><a href="http://ettu.ru/"><u>http://ettu.ru/</u></a></string>
+    <string name="gitLink"><a href="https://github.com/sanaxes/Trams/"><u>https://git.io/vFmoV</u></a></string>
     <string name="flaticonLink"><a href="http://flaticon.com"><u>http://flaticon.com/</u></a></string>
     <string name="feedback"><a href="mailto:sanaxes@gmail.com"><u>sanaxes@gmail.com</u></a></string>
 </resources>

@@ -60,6 +60,8 @@ class Trams : NavigationViewListener() {
         toggle.syncState()
         nav_view.setNavigationItemSelectedListener(this)
         selectedStation = SelectedStation.station
+        // For next update
+        /*
         checkbox = CheckBox(this)
         val sharedPref = this.getSharedPreferences(
                 getString(R.string.com_example_alexander_preference_file_key), Context.MODE_PRIVATE)
@@ -82,19 +84,11 @@ class Trams : NavigationViewListener() {
                     sharedPref.edit().remove(selectedStation.id.toString()).apply()
             }
         }
-//        toolbar.addView(checkbox)
-//        val flex = FlexboxLayout(this)
-//        flex.flexDirection = FlexboxLayout.FLEX_DIRECTION_ROW
-//        flex.flexWrap = FlexboxLayout.FLEX_WRAP_NOWRAP
-//        flex.justifyContent = FlexboxLayout.JUSTIFY_CONTENT_FLEX_START
-//        flex.backgroundColor = Color.RED
-//        val size = Point()
-//        windowManager.defaultDisplay.getSize(size)
-//        val width = size.x
-//        flex.layoutParams = FlexboxLayout.LayoutParams(width - toolbar.width, FlexboxLayout.LayoutParams.MATCH_PARENT)
-//        Log.e("size", "${toolbar.width}")
-//        flex.addView(checkbox)
-        toolbar.addView(checkbox)
+        val support = FrameLayout(this)
+        support.backgroundColor = Color.RED
+        support.addView(checkbox)
+        toolbar.addView(support)
+        */
         setTrams()
     }
 
@@ -105,7 +99,6 @@ class Trams : NavigationViewListener() {
             isShrinkAllColumns = true
         }
         listOfTransport = ArrayList()
-
         val rowTitle = TableRow(this)
         val size = Point()
         windowManager.defaultDisplay.getSize(size)

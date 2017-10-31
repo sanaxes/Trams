@@ -6,11 +6,12 @@ import android.support.v4.content.ContextCompat
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.widget.Button
-import android.widget.TextView
 import java.util.ArrayList
 import android.widget.Toast
 import com.google.android.flexbox.FlexboxLayout
 import kotlinx.android.synthetic.main.activity_main.*
+import net.hockeyapp.android.CrashManager
+import net.hockeyapp.android.UpdateManager
 import org.jetbrains.anko.backgroundColor
 import org.jetbrains.anko.sdk25.coroutines.onClick
 import org.jetbrains.anko.startActivity
@@ -20,18 +21,10 @@ import org.jsoup.Jsoup
 
 class MainActivity : NavigationViewListener() {
     private lateinit var buttons: ArrayList<Button>
-
     companion object {
         var letter: String = ""
     }
 
-    /** КОПИРОВАНИЕ ТЕКСТА !!!!
-     * SubTitle
-     * картинка
-     * в идеале - swiperefresh
-     * обрамовка кнопок
-     * удаление из избранного
-     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -42,12 +35,14 @@ class MainActivity : NavigationViewListener() {
         toggle.syncState()
         nav_view.setNavigationItemSelectedListener(this)
         setWords()
+        checkForCrashes();
     }
 
     override fun onResume() {
         super.onResume()
         scrollViewMain.removeAllViews()
         setWords()
+        checkForCrashes();
     }
 
     private fun setWords() {
@@ -120,6 +115,24 @@ class MainActivity : NavigationViewListener() {
             true -> drawer_layout.closeDrawer(GravityCompat.START)
             false -> super.onBackPressed()
         }
+    }
+
+    public override fun onPause() {
+        super.onPause()
+        unregisterManagers()
+    }
+
+    public override fun onDestroy() {
+        super.onDestroy()
+        unregisterManagers()
+    }
+
+    private fun checkForCrashes() {
+        CrashManager.register(this)
+    }
+
+    private fun unregisterManagers() {
+        UpdateManager.unregister()
     }
 
 }
