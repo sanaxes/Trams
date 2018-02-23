@@ -1,11 +1,12 @@
-package com.example.alexander.trams
+package com.example.alexander.trams.activities
 
 import android.os.Bundle
 import android.support.v7.app.ActionBarDrawerToggle
 import android.widget.TextView
+import com.example.alexander.trams.R
 import kotlinx.android.synthetic.main.activity_info.*
 
-class Info : NavigationViewListener() {
+class Information : NavigationViewListener() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -10,7 +10,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 25
         versionCode 1
-        versionName "1.0"
+        versionName "1.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         manifestPlaceholders = [HOCKEYAPP_APP_ID: "9129cceb13284a9d846b7652a5ecb4eb"]
     }
@@ -38,8 +38,8 @@ dependencies {
     compile 'com.google.android:flexbox:0.1.2'
     compile 'com.android.support:design:25.3.1'
     compile 'com.google.code.gson:gson:2.6.2'
+    compile group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib-jdk7', version: '1.2.21'
     testCompile 'junit:junit:4.12'
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     compile "org.jetbrains.anko:anko:0.10.1"
 }
 repositories {

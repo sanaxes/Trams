@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme">
         <meta-data android:name="net.hockeyapp.android.appIdentifier" android:value="${HOCKEYAPP_APP_ID}" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.SelectLetter"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -22,33 +22,33 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SelectStation"
+            android:name=".activities.SelectStation"
             android:label="@string/title_activity_select_word"
             android:screenOrientation="portrait"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".activities.SelectLetter"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".activities.SelectLetter" />
         </activity>
         <activity
-            android:name=".Trams"
+            android:name=".activities.TransportList"
             android:label="@string/title_activity_select_word"
             android:screenOrientation="portrait"
-            android:parentActivityName=".SelectStation"
+            android:parentActivityName=".activities.SelectStation"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".SelectStation" />
+                android:value=".activities.SelectStation" />
         </activity>
         <activity
-            android:name=".Info"
+            android:name=".activities.Information"
             android:label="@string/title_activity_select_word"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".Fav"
+            android:name=".activities.Favorite"
             android:label="@string/title_activity_select_word"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
